@@ -1,0 +1,20 @@
+
+    
+
+<div class="ui raised very padded text container segment">
+        <h2> Estimates </h2>
+        <div class="ui celled table">
+            <div id="uber" class="ui padded text container segment">
+                
+                <%_.each(uber, function(u){ %>
+                    <h3><%= u.name %></h3>
+                   <div> Estimate: <%= u.estimate %></div>
+                <% }); %>
+            </div>
+            
+            <div id="Auto" class="ui padded text container segment">
+                <h3>Auto</h3>
+                <div> Estimate: ₹<%= Math.round(auto.estimate) %></div>
+            </div>        
+        </div>
+    </div>

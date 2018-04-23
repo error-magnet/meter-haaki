@@ -1,0 +1,56 @@
+
+<head>
+
+<title>Meter Haaki</title>
+
+<!-- 
+<script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
+
+<script src="http://cdn.jsdelivr.net/webshim/1.12.4/polyfiller.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.m
+in.css">
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.js"></script> -->
+
+</head>
+
+<body>
+    
+        <h2 align="center">Meter Haaki</h2>
+        <h4 align="center">Bengaluru Transit Cost Calculator</h4>
+    
+    <div class="ui raised padded text container segment">
+        <h5>From:</h5>
+        <input id="from" class="ui input" value="Hebbal"></input>
+        <h5>To:</h5>
+        <input id="to" class="ui input" value="MG Road"></input>
+        <button id="search" class="ui button">Estimate</button>
+    </div>
+    <script>
+        $(document).ready(function(){
+            var search = document.getElementById('search');
+            search.onclick = function(){
+                var from = document.getElementById('from');
+                var to = document.getElementById('to');
+
+                var fromTo = {'from': from.value, 'to': to.value};
+                
+                window.location.href = '/estimate?from='+from.value
+                    + '&to='+to.value;
+                // $.ajax({
+                //     method: "GET",
+                //     url: "/estimate",
+                //     data: fromTo,
+                //     contentType: 'application/json',
+                // }).done(function(){
+                //         console.log(event);
+                // }).fail(function() {
+                //         console.log(event);
+                // });
+
+            };
+        });
+    </script>
+</body>
